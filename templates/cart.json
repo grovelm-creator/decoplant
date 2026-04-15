@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "main": {
+      "type": "cart-template",
+      "blocks": {
+        "estimated_total": {
+          "type": "estimated_total",
+          "settings": {
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "estimated_total",
+        "buttons"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

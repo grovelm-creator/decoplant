@@ -1,0 +1,42 @@
+{% section 'header' %}
+
+<main class="page-width">
+  <div class="customer account">
+    <div class="myaccount-header">
+      <h2>
+        {% if customer.first_name %}
+          {{ 'customer.account.hi_name' | t: customer_name: customer.first_name }}
+        {% else %}
+          {{ 'customer.account.hi' | t }}
+        {% endif %}
+      </h2>
+    </div>
+
+    <div class="myaccount">
+      <ul class="myaccount_list">
+        <li class="myaccount_list_item">
+          <a class="myaccount_list_item-link" href="{{ routes.account_url | append: '?view=orders' }}">
+            {{ 'customer.account.order_history' | t }}
+          </a>
+        </li>
+        <li class="myaccount_list_item">
+          <a class="myaccount_list_item-link" href="{{ routes.account_addresses_url }}">
+            {{ 'customer.account.address_book' | t }}
+          </a>
+        </li>
+        <li class="myaccount_list_item">
+          <a class="myaccount_list_item-link" href="{{ routes.account_url | append: '?view=details' }}">
+            {{ 'customer.account.account_details' | t }}
+          </a>
+        </li>
+        <li class="myaccount_list_item">
+          <a class="myaccount_list_item-link" href="{{ routes.account_logout_url }}">
+            {{ 'customer.log_out' | t }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+{% section 'footer' %}
